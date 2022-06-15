@@ -95,7 +95,7 @@ install_jdk() {
 
   # DEBUG HAX
   env
-  curl --fail --retry 3 --retry-connrefused --connect-timeout 5 --location $JVM_COMMON_BUILDPACK --output /tmp/jvm_common.tgz
+  curl -vvv --fail --retry 3 --retry-connrefused --connect-timeout 5 --location $JVM_COMMON_BUILDPACK --output /tmp/jvm_common.tgz
   ls -l /tmp/jvm_common.tgz
   du -sh /tmp/jvm_common.tgz
   file /tmp/jvm_common.tgz
