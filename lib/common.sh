@@ -94,6 +94,7 @@ install_jdk() {
   #curl --fail --retry 3 --retry-connrefused --connect-timeout 5 --silent --location $JVM_COMMON_BUILDPACK | tar xzm -C /tmp/jvm-common --strip-components=1
 
   # DEBUG HAX
+  env
   curl --fail --retry 3 --retry-connrefused --connect-timeout 5 --location $JVM_COMMON_BUILDPACK --output /tmp/jvm_common.tgz
   ls -l /tmp/jvm_common.tgz
   du -sh /tmp/jvm_common.tgz
